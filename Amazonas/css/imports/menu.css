@@ -1,0 +1,34 @@
+#menuphp{
+    width: 100%;
+    height: 50px;
+    background-color: greenyellow;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    'menulogo guia';
+}
+
+#menulogo{
+    grid-area: menulogo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menulogo>img{
+    width: 85px;
+}
+
+#guia{
+    grid-area: guia;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#guia>a{
+    margin-left: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
