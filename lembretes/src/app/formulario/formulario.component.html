@@ -1,0 +1,32 @@
+<div id="div-principal">
+    <form>
+        <label for="">Titulo da Tarefa: </label>
+        <input type="text" [(ngModel)]="tarefa" name="tarefa">
+        <br>
+        <label for="">Nivel de Urgencia: </label>
+        <select [(ngModel)]="nivel" name="nivel" id="">
+            <option value="baixo">Baixo</option>
+            <option value="medio">Medio</option>
+            <option value="alto">Alto</option>
+        </select>
+        <br>
+        <label for="">Data Entrega:</label>
+        <input type="date" [(ngModel)]="data" name="data">
+        <br>
+        <input type="submit" id="botao" (click)="salvardadostarefa()" [ngStyle]="{display : getLength()}" (click)="enviardados()" value="Salvar">
+        <input type="submit" id="botao" (click)="consolelog()" value="Console"> <!--  //Botão para consultar o console -->
+    </form>
+
+    <div id="div-tarefa">
+            
+            <p *ngFor="let tarefavisal of listatarefa">
+            Tarefa: {{tarefavisal.tarefa}} <br>
+            Nivel: {{tarefavisal.nivel}} <br>
+            Prazo: {{tarefavisal.data | date:'d/M/yyyy'}}
+            <input type="submit" id="botao" (click)="excluirTarefa(tarefavisal)" (click)="excluirvisual(tarefavisal)" value="Excluir">
+            <input type="submit" id="botao" value="Concluir">
+            </p>
+            
+    </div>
+
+</div>

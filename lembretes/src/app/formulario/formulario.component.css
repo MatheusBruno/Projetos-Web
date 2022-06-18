@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#div-principal{
+    width: 100%;
+    height: 110%;
+    background-color: antiquewhite;
+}
+
+div{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#div-tarefa{
+    width: 1000px;
+    height: 650px;
+    overflow:auto;
+}
+
+label, p{
+    font-size: 25px;
+}
+
+p{
+    margin-top: 15px;
+    border-bottom: 2px solid black;
+}
+
+select, input{
+    width: 150px;
+}
